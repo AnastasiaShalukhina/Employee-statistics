@@ -1,6 +1,7 @@
 import { Component } from "react";
 
-import "./employees-add-form.css";
+// import "./employees-add-form.css";
+import "./employees-add-form.scss";
 
 class EmployeesAddForm extends Component {
   constructor(props) {
@@ -29,10 +30,10 @@ class EmployeesAddForm extends Component {
   }
 
   render() {
-    const {name, salary} = this.state;
+    const { name, salary } = this.state;
 
-    return(
-      <div className = "app-add-form" >
+    return (
+      <div className="app-add-form" >
         <h3>Добавьте нового сотрудника</h3>
         <form
           className="add-form d-flex"
@@ -42,7 +43,7 @@ class EmployeesAddForm extends Component {
             placeholder="Как его зовут?"
             name="name"
             value={name}
-            onChange={this.onValueChange}/>
+            onChange={this.onValueChange} />
           <input type="number"
             className="form-control new-post-label"
             placeholder="З/П в $?"
@@ -51,7 +52,7 @@ class EmployeesAddForm extends Component {
             onChange={this.onValueChange} />
 
           <button type="submit"
-                  className="btn btn-outline-light">Добавить
+            className="btn btn-outline-light">Добавить
           </button>
         </form>
       </div>
